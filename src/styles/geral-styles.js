@@ -17,6 +17,10 @@ export const DivGrupo = styled.div`
     margin-bottom: 10px;
   }
 
+  label{
+    font-size: 14px;
+  }
+
   .dados {
     flex: 1 1 100%;
     display: flex;
@@ -27,6 +31,7 @@ export const DivGrupo = styled.div`
       width: 100%;
       padding: 6px;
       outline: none;
+      overflow: hidden;
       border-radius: 3px;
 
       &:focus{
@@ -38,16 +43,24 @@ export const DivGrupo = styled.div`
   }
   .senha,
   .cep {
-    flex: 1 1 30%;
+    flex: 1 1 40%;
   }
-  .celular,
+
+  .cpf{
+    flex: 1 1 40%;
+  }
+  .username,
+  .nascimento{
+    flex: 1 1 40%;
+  }
+  .telefone,
   .rua {
-    flex: 1 1 60%;
+    flex: 1 1 40%;
   }
   .numero,
   .bairro,
   .cidade {
-    flex: 1 1 30%;
+    flex: 1 1 40%;
   }
   .butons {
     display: flex;

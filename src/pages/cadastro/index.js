@@ -9,13 +9,17 @@ import '../../index.css';
 const Cadastro = () => {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
-  const [celular, setCelular] = useState("");
+  const [telefone, setTelefone] = useState("");
+  const [cpf,setCpf] = useState("");
+  const [username,setUsername] = useState("");
+  const [nascimento,setNascimento] = useState("");
   const [cep, setCep] = useState("");
   const [rua, setRua] = useState("");
   const [numero, setNumero] = useState("");
   const [bairro, setBairro] = useState("");
   const [cidade, setCidade] = useState("");
   const [complemento, setComplemento] = useState("");
+
 
   const obterCep = (e) => {
     if (!e.target.value) {
@@ -42,7 +46,10 @@ const Cadastro = () => {
     const usuario = {
       email: email,
       senha: senha,
-      celular: celular,
+      telefone: telefone,
+      cpf:cpf,
+      username:username,
+      dataNascimento:nascimento,
       cep: cep,
       rua: rua,
       numero: numero,
@@ -54,7 +61,10 @@ const Cadastro = () => {
 
     setEmail("");
     setSenha("");
-    setCelular("");
+    setTelefone("");
+    setCpf("");
+    setUsername("");
+    setNascimento("");
     setCep("");
     setRua("");
     setNumero("");
@@ -91,16 +101,51 @@ const Cadastro = () => {
             />
           </div>
 
-          <div className="dados celular">
-            <label htmlFor="celular"> Celular* </label>
+          <div className="dados telefone">
+            <label htmlFor="telefone"> Telefone* </label>
             <br />
             <input
-              name="celular"
-              itemID="celular"
+              name="telefone"
+              itemID="telefone"
               type="text"
               placeholder="(DDD) 999-999999"
-              value={celular}
-              onChange={(e) => setCelular(e.target.value)}
+              value={telefone}
+              onChange={(e) => setTelefone(e.target.value)}
+            />
+          </div>
+          <div className="dados cpf">
+            <label htmlFor="cpf"> CPF* </label>
+            <br />
+            <input
+              name="cpf"
+              itemID="cpf"
+              type="text"
+              placeholder="00000000000"
+              value={cpf}
+              onChange={(e) => setCpf(e.target.value)}
+            />
+          </div>
+          <div className="dados username">
+            <label htmlFor="username"> Username* </label>
+            <br />
+            <input
+              name="username"
+              itemID="username"
+              type="text"
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </div>
+          <div className="dados nascimento">
+            <label htmlFor="nascimento"> Nascimento* </label>
+            <br />
+            <input
+              name="nascimento"
+              itemID="nascimento"
+              type="date"
+              value={nascimento}
+              onChange={(e) => setNascimento(e.target.value)}
             />
           </div>
 
