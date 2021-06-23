@@ -6,25 +6,35 @@ export const DivGrupo = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-
-  width: 40%;
+  width: 30%;
   margin: 4% auto;
   padding: 15px;
-  border: solid 5px #000;
-
-  background-color: #fff;
+  border: solid 2px #481ed6;
+  box-shadow: 0 0 10px 0 rgb(50 50 50 / 82%);
+  
+  h1{
+    color:#481ed6;
+    margin-bottom: 10px;
+  }
 
   .dados {
     flex: 1 1 100%;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
+    padding: 5px;
     input {
       width: 100%;
-      padding: 4px;
+      padding: 6px;
+      outline: none;
       border-radius: 3px;
-      border-style: solid;
+
+      &:focus{
+      border-color: #481ed6;
+      box-shadow: 0 0 10px 0 rgb(50 50 50 / 82%);
     }
+  }
+
   }
   .senha,
   .cep {
@@ -42,5 +52,20 @@ export const DivGrupo = styled.div`
   .butons {
     display: flex;
     flex-direction: column;
+
+    p{
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    a{
+      text-decoration: none;
+      color:#481ed6;
+      font-weight: 400;
+      margin: 15px;
+      display: flex;
+      justify-content: end;
+    }
   }
 `;
+

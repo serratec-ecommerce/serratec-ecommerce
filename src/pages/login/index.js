@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import http from '../../service/Api';
-import{Botao, BotaoSecundario} from '../../styles/buttons-styles';
+import { Botao,BotaoSecundario } from "../../styles/buttons-styles";
+import { DivGrupo} from "../../styles/geral-styles";
 import { Link } from "react-router-dom";
 
 
@@ -40,23 +41,29 @@ const Login = () => {
     return (
         <div>
             <form onSubmit={realizarLogin}>
-                <div>
-                    <label htmlFor="username"> Digite seu username </label>
-                    <input itemID="username" type="text" value={username} onChange={handleUsername} />
+            <DivGrupo>
+                <h1> Cadastro</h1>
+                <div className="dados">
+                    <label htmlFor="username"> Username* </label><br/>
+                    <input itemID="username" type="text" placeholder="Username" 
+                    value={username} onChange={handleUsername}/>
                 </div>
-                <div>
-                    <label htmlFor="senha"> Digite sua senha </label>
-                    <input itemID="senha" type="password" value={senha} onChange={handleSenha} />
+                <div className="dados senha">
+                    <label htmlFor="senha"> Senha* </label><br/>
+                    <input itemID="senha" type="password" placeholder="Senha" 
+                    value={senha} onChange={handleSenha} />
                 </div>
-                <div>
+                <div className="butons">
                     <Botao> Continuar </Botao>
-                    <p> Ao continuar você concorda com as Condições de Uso Da Serratec-Commerce</p>
+                    <p> Ao continuar você concorda com as Condições de Uso Do Serra-ECommerce</p>
                 </div>
-                <div>
+                <div className="butons">
                     <Link to ={"/cadastro"}> Esqueci minha senha</Link>
-                    <BotaoSecundario> <Link to ={"/cadastro"}> Crie sua conta grátis</Link></BotaoSecundario>
+                    <BotaoSecundario> <Link to ={"/cadastro"}> Crie sua conta grátis
+                    </Link>
+                    </BotaoSecundario>
                 </div>
-
+            </DivGrupo>
             </form>
         </div>
     );

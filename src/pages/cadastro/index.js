@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Botao } from "../../styles/buttons-styles";
+import { Botao,BotaoSecundario } from "../../styles/buttons-styles";
 import { DivGrupo } from "../../styles/geral-styles";
 import { Link } from "react-router-dom";
 import http from "../../service/Api";
 import apiViaCep from "../../service/ViaCepApi";
-import "./index.css";
+import '../../index.css';
 
 const Cadastro = () => {
   const [email, setEmail] = useState("");
@@ -67,45 +67,50 @@ const Cadastro = () => {
     <div>
       <form onSubmit={realizarCadastro}>
         <DivGrupo>
+        <h1>Login</h1>
           <div className="dados">
-            <label htmlFor="email"> E-mail </label>
+            <label htmlFor="email"> E-mail* </label>
             <br />
             <input
               itemID="email"
               type="text"
+              placeholder="exemplo@exemplo.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="dados senha">
-            <label htmlFor="senha"> Senha </label>
+            <label htmlFor="senha"> Senha* </label>
             <br />
             <input
               itemID="senha"
               type="password"
+              placeholder="Senha"
               value={senha}
               onChange={(e) => setSenha(e.target.value)}
             />
           </div>
 
           <div className="dados celular">
-            <label htmlFor="celular"> Celular </label>
+            <label htmlFor="celular"> Celular* </label>
             <br />
             <input
               name="celular"
               itemID="celular"
-              type="number"
+              type="text"
+              placeholder="(DDD) 999-999999"
               value={celular}
               onChange={(e) => setCelular(e.target.value)}
             />
           </div>
 
           <div className="dados cep">
-            <label htmlFor="cep"> Cep </label>
+            <label htmlFor="cep"> Cep* </label>
             <br />
             <input
               itemID="cep"
               type="text"
+              placeholder="00000-000"
               onBlur={obterCep}
               value={cep}
               onChange={(e) => setCep(e.target.value)}
@@ -123,11 +128,12 @@ const Cadastro = () => {
             />
           </div>
           <div className="dados numero">
-            <label htmlFor="numero"> Numero </label>
+            <label htmlFor="numero"> Numero* </label>
             <br />
             <input
               itemID="numero"
               type="text"
+              placeholder="Numero"
               value={numero}
               onChange={(e) => setNumero(e.target.value)}
             />
@@ -160,16 +166,17 @@ const Cadastro = () => {
             <input
               itemID="complemento"
               type="text"
+              placeholder="Complemento"
               value={complemento}
               onChange={(e) => setComplemento(e.target.value)}
             />
           </div>
           <div className="butons">
             <Botao type="submit">Cadastrar</Botao>
-            <Botao>
+            <BotaoSecundario >
               {" "}
               <Link to={"/login"}> Voltar</Link>
-            </Botao>
+            </BotaoSecundario>
           </div>
         </DivGrupo>
       </form>
