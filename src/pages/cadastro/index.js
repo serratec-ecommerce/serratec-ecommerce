@@ -20,7 +20,6 @@ const Cadastro = () => {
   const [cidade, setCidade] = useState("");
   const [complemento, setComplemento] = useState("");
 
-
   const obterCep = (e) => {
     if (!e.target.value) {
       return;
@@ -41,8 +40,24 @@ const Cadastro = () => {
 
   const realizarCadastro = (event) => {
     event.preventDefault();
-    console.log(event.target.celular.value);
 
+    /*
+    "email": "lucascs201826@gmail.com",
+    "username": "luke2",
+    "senha": "senhaluke1",
+    "nome": "Luke Silva",
+    "cpf": "19767965046",
+    "telefone": "21912341231",
+    "dataNascimento": "1997-06-01",
+    "enderecosDoCliente": [
+        {
+            "cep": "25965690",
+            "numero": 151,
+            "complemento": "algum complemento aqui"
+        }
+    ]
+    */
+    
     const usuario = {
       email: email,
       senha: senha,
@@ -50,34 +65,47 @@ const Cadastro = () => {
       cpf:cpf,
       username:username,
       dataNascimento:nascimento,
-      cep: cep,
-      rua: rua,
-      numero: numero,
-      bairro: bairro,
-      cidade: cidade,
-      complemento: complemento,
+      enderecosDoCliente:[{
+          cep: cep,
+          numero:numero,
+          complemento: complemento
+        }
+      ]
+      
+      // cep: cep,
+      // rua: rua,
+      // numero: numero,
+      // bairro: bairro,
+      // cidade: cidade,
+      // complemento: complemento,
     };
-    http.post("/cadastro", usuario).then((response) => response.data);
-
-    setEmail("");
-    setSenha("");
-    setTelefone("");
-    setCpf("");
-    setUsername("");
-    setNascimento("");
-    setCep("");
-    setRua("");
-    setNumero("");
-    setBairro("");
-    setCidade("");
-    setComplemento("");
+    http.post("/create", usuario)
+    .then((response) => {
+      console.log(response)
+      setEmail("");
+      setSenha("");
+      setTelefone("");
+      setCpf("");
+      setUsername("");
+      setNascimento("");
+      setCep("");
+      setRua("");
+      setNumero("");
+      setBairro("");
+      setCidade("");
+      setComplemento("");
+    })
+    .catch(error => {
+      console.log(error)
+    })
+    console.log(usuario.enderecosDoCliente)
   };
 
   return (
     <div>
       <form onSubmit={realizarCadastro}>
         <DivGrupo>
-        <h1>Login</h1>
+        <h1>Cadastro</h1>
           <div className="dados">
             <label htmlFor="email"> E-mail* </label>
             <br />

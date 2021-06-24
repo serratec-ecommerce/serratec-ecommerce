@@ -15,7 +15,7 @@ const Routes = () => (
   //Dizer que vai fazer as rotas atras de um browser
   <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={Cadastro} />
+      <Route exact path="/" component={Home} />
       <Route exact path="/produtos" component={DetalhesProduto} />
       <Route path="/produtos/pesquisa" component={Pesquisa} />
       <Route path="/cadastro" component={Cadastro} />
