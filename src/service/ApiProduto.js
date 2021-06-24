@@ -17,7 +17,17 @@ function obterPorId(id){
     });
 }
 
+
+function obterProdutoPorId(id){
+    return new Promise((resolve, reject) => {
+        return api.get(`/produto/${id}`)
+        .then(response => resolve(response))
+        .catch(error => reject(error))
+    });
+}
+
 export default {
     getProduto,
-    obterPorId
+    obterPorId,
+    obterProdutoPorId
 }

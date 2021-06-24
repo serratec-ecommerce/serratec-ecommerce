@@ -15,9 +15,10 @@ import Detalhes from './pages/carrinho/detalhes'
 const Routes = () => (
   //Dizer que vai fazer as rotas atras de um browser
   <BrowserRouter>
+   <Topo/>
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route exact path="/produtos" component={DetalhesProduto} />
+      <Route exact path="/produtos/:id" component={DetalhesProduto} />
       <Route path="/produtos/pesquisa" component={Pesquisa} />
       <Route path="/cadastro" component={Cadastro} />
       <Route exact path="/carrinho" component={Carrinho} />
