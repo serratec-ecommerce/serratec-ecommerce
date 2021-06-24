@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import utilStorage from "../../utils/storage";
+import utilStorage from '../../utils/storage'
 import apiUsuario from "../../service/ApiUsuario";
 import { Botao, BotaoSecundario } from "../../styles/buttons-styles";
 import { DivGrupo } from "../../styles/geral-styles";

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ApiCarrinho from '../../service/ApiCarrinho';
 import { Link } from 'react-router-dom';
-
+import utilStorage from '../../utils/storage'
 
 const Carrinho = () => {
 
@@ -15,6 +15,11 @@ const Carrinho = () => {
     }
 
     useEffect(() => {
+        let token = utilStorage.obterTokenNaStorage();
+
+        if (!token) {
+          window.open("/login", "_self");
+        }
         obterPedidos()
     }, [])
 

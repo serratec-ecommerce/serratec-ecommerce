@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import MeuCard from '../../../components/Card/MeuCard';
 import ApiCarrinho from '../../../service/ApiCarrinho';
+import utilStorage from '../../../utils/storage'
 const Detalhes = (props) => {
 
     const [produtos, setProdutos] = useState([])
@@ -18,6 +19,12 @@ const Detalhes = (props) => {
     const { numeroDoPedido } = props.match.params;
 
     useEffect(() => {
+        let token = utilStorage.obterTokenNaStorage();
+
+        if (!token) {
+          window.open("/login", "_self");
+        }
+
         obterProdutos(numeroDoPedido);
     }, "batinha")
 
