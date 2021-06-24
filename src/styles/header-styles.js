@@ -9,7 +9,7 @@ export const Header = styled.div`
     /* border-top: 2px solid #ddd;
     border-bottom: 2px solid #ddd; */
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 25% 50% 25%;
      
     
     div{
