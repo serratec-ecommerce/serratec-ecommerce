@@ -7,14 +7,6 @@ class Produto{
         this.categoria = obj.idCategoria;
         this.imagem = obj.url;
     }
-
-    /**
-    "nome": "string",
-    "descricao": "string",
-    "preco": 0,
-    "idCategoria": 0,
-    "url": "string",
-    */
 }
 
 export default Produto;
