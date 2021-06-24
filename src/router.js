@@ -11,7 +11,7 @@ import Pagamento from "./pages/pagamento";
 import Pesquisa from "./pages/home";
 import Header from "./components/Header";
 import Detalhes from './pages/carrinho/detalhes'
-
+import Topo from '../src/components/Header/index'
 const Routes = () => (
   //Dizer que vai fazer as rotas atras de um browser
   <BrowserRouter>
