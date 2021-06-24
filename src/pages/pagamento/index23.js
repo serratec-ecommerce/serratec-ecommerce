@@ -10,7 +10,7 @@ const Pagamento = () => {
 
   return (
     <DivPag>
-      <h2 class="mb-3">Pagamento</h2>
+      <h2 class="mb-3">Pag</h2>
 
       <div className="my-3">
         <div className="form-check">
