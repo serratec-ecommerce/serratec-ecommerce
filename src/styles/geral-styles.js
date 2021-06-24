@@ -85,4 +85,22 @@ export const DivGrupo = styled.div`
       text-decoration: none;
       color: #481ed6;
     }
-  }`;
+  
+  `;
+
+  export const DivPag = styled(DivGrupo)`
+    display:flex;
+    flex-direction:column;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 600px;
+
+    h2{
+      padding-left:200px;
+      color: #481ed6;
+    }
+
+    .radios{
+      
+    }
+  `;
