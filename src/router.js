@@ -10,6 +10,7 @@ import Login from "./pages/login";
 import Pagamento from "./pages/pagamento";
 import Pesquisa from "./pages/home";
 import Header from "./components/Header";
+import Detalhes from './pages/carrinho/detalhes'
 
 const Routes = () => (
   //Dizer que vai fazer as rotas atras de um browser
@@ -19,10 +20,11 @@ const Routes = () => (
       <Route exact path="/produtos" component={DetalhesProduto} />
       <Route path="/produtos/pesquisa" component={Pesquisa} />
       <Route path="/cadastro" component={Cadastro} />
-      <Route path="/carrinho" component={Carrinho} />
+      <Route exact path="/carrinho" component={Carrinho} />
+      <Route path="/carrinho/pedido/:numeroDoPedido" component={Detalhes} />
+      <Route path="/login" component={Login} />
+      <Route path="/pagamento" component={Pagamento} />
     </Switch>
-    <Route path="/login" component={Login} />
-    <Route path="/pagamento" component={Pagamento} />
   </BrowserRouter>
 );
 

@@ -11,7 +11,7 @@ function getProduto(){
 
 function obterPorId(id){
     return new Promise((resolve, reject) => {
-        return api.get(`/produtos/${id}`)
+        return api.get(`/produto/${id}`)
         .then(response => resolve(response))
         .catch(error => reject(error))
     });

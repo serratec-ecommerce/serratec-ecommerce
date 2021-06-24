@@ -16,27 +16,6 @@ const Login = () => {
     setSenha(e.target.value);
   };
 
-  // const realizarLogin = (e) => {
-  //     e.preventDefault()
-  //     // const usuario = {
-  //     //     username: username,
-  //     //     senha: senha
-  //     // }
-  //     // api.post('/login', usuario)
-  //     //     .then(response => {
-  //     //         localStorage.setItem('token', response.data.access_token)
-  //     //         console.log(localStorage.getItem('token'))
-  //     //     })
-  //     //     .catch(erro => {
-  //     //         console.log('Algo deu errado')
-  //     //         console.log(erro);
-  //     //     })
-
-  //     //     setUsername('')
-  //     //     setSenha('')
-
-  // }
-
   const realizarLogin = (e) => {
     e.preventDefault();
     if (!username || !senha) {

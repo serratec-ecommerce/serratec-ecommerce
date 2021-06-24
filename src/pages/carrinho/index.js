@@ -1,56 +1,36 @@
-import React,{useState,useEffect} from 'react';
-//import ApiCarrinho from '../../service/ApiCarrinho';
-import ApiUsuario from '../../service/ApiUsuario';
-//import utilSotorage from '../../utils/storage'
-import MeuCard from '../../components/Card/MeuCard';
-import ApiProduto from '../../service/ApiProduto';
+import React, { useState, useEffect } from 'react';
+import ApiCarrinho from '../../service/ApiCarrinho';
+import { Link } from 'react-router-dom';
 
 
 const Carrinho = () => {
-    
+
     const [pedidos, setPedidos] = useState([]);
-    const [produtos,setProdutos] = useState([])
+    // const [produtos,setProdutos] = useState([]);
 
-    const obterPedidos =() =>{
-        ApiUsuario.obterPedido()
-        .then(response =>{
-            let produtos= 
-            setPedidos(response.data)
-            .map(produto => obterProdutos(produto.produtosDoPedido.idDoProduto));
-            setProdutos(produtos)
-
-            console.log(produtos)
-            
-        })
-        .catch(erro =>{
-            console.log(erro);
-        })
-    }
-
-    const obterProdutos =(id) =>{
-        ApiProduto.obterPorId(id)
-        .then(response =>{
-            setProdutos(response.data)
-        })
+    const obterPedidos = async () => {
+        const resposta = await ApiCarrinho.obterTodos();
+        setPedidos(resposta.data);
+        console.log(pedidos);
     }
 
     useEffect(() => {
-        obterPedidos();
-    },[])
+        obterPedidos()
+    }, [])
 
-    return(
+    return (
+
         <div className='container-produtos'>
-        <h1>Carrinho</h1>
-        {pedidos.map(pedidos=> (
-            <MeuCard 
-                valorTotal={pedidos.valorTotal}
-                produtosDoPedido={produtos.nome}
-                descricao={produtos.descricao}
-                preco={produtos.preco}
-            />
-        ))
-        }
-    </div>
+            <h1>Carrinho</h1>
+            {pedidos.map(pedido => (
+                <Link to={'/carrinho/pedido/'+ pedido.numeroPedido} key={pedido.numeroPedido}>
+                    <div>
+                        <h1>{pedido.numeroPedido}</h1>
+                        <h1>R${pedido.valorTotal}</h1>
+                    </div>
+                </Link>
+            ))}
+        </div>
     );
 
     // {
@@ -73,18 +53,18 @@ const Carrinho = () => {
     //   }
 
 
-//     <div className='container-produtos'>
-//     <h1>Carrinho</h1>
-//     {produtos.map(produtos => (
-//         <MeuCard 
-//             img={produtos.url}
-//             nome={produtos.nome}
-//             descricao={produtos.descricao}
-//             preco={produtos.preco}
-//         />
-//     ))
-//     }
-// </div>
+    //     <div className='container-produtos'>
+    //     <h1>Carrinho</h1>
+    //     {produtos.map(produtos => (
+    //         <MeuCard 
+    //             img={produtos.url}
+    //             nome={produtos.nome}
+    //             descricao={produtos.descricao}
+    //             preco={produtos.preco}
+    //         />
+    //     ))
+    //     }
+    // </div>
 
 }
 export default Carrinho;
