@@ -28,12 +28,20 @@ export const DivGrupo = styled.div`
     flex-wrap: wrap;
     overflow: hidden;
     padding: 5px;
+
     input {
       width: 100%;
       padding: 6px;
       outline: none;
       overflow: hidden;
       border-radius: 3px;
+      color:gray;}
+
+      input[type="date"] {
+      color:gray
+        
+      }
+    
 
       &:focus {
         border-color: #481ed6;
@@ -77,5 +85,4 @@ export const DivGrupo = styled.div`
       text-decoration: none;
       color: #481ed6;
     }
-  }
-`;
+  }`;
