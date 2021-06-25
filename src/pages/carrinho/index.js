@@ -18,7 +18,7 @@ const Carrinho = () => {
         let token = utilStorage.obterTokenNaStorage();
 
         if (!token) {
-          window.open("/login", "_self");
+            window.open("/login", "_self");
         }
         obterPedidos()
     }, [])
@@ -28,12 +28,21 @@ const Carrinho = () => {
         <div className='container-produtos'>
             <h1>Carrinho</h1>
             {pedidos.map(pedido => (
-                <Link to={'/carrinho/pedido/'+ pedido.numeroPedido} key={pedido.numeroPedido}>
-                    <div>
-                        <h1>{pedido.numeroPedido}</h1>
-                        <h1>R${pedido.valorTotal}</h1>
-                    </div>
-                </Link>
+                <div>
+                    <Link to={'/carrinho/pedido/' + pedido.numeroPedido} key={pedido.numeroPedido}>
+                        <div>
+                            <h1>Número do pedido: {pedido.numeroPedido}</h1>
+                            <h1>Valor: R${pedido.valorTotal}</h1>
+                        </div>
+                    </Link>
+                    <Link to={'/pagamento/' + pedido.numeroPedido} key={pedido.numeroPedido}>
+                        <div>
+                            <button>Finalizar</button>
+                            <h1>R${pedido.valorTotal}</h1>
+                        </div>
+                    </Link>
+                </div>
+
             ))}
         </div>
     );
@@ -73,4 +82,3 @@ const Carrinho = () => {
 
 }
 export default Carrinho;
-    

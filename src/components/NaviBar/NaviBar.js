@@ -7,11 +7,19 @@ const NaviBarTopo = ()=>{
        <NaviBarWay>
            <span></span>
             <ul>
-                <li className="menu">Frete Grátis</li>
-                <li className="picle">|</li>
+                <li className="menu">
+                    <Link to={'/frete-gratis'}>Frete Grátis</Link>
+                </li>
+                <li className="menu">
+                    <Link to={'/nacional'}>Nacionais</Link>
+                </li>
+                <li className="menu">
+                    <Link to={'/importado'}>Importados</Link>
+                </li>
+                {/* <li className="picle">|</li>
                 <li className="menu">Nacionais</li>
                 <li className="picle">|</li>
-                <li className="menu">Importados</li>
+                <li className="menu">Importados</li> */}
           </ul>
           <div>
                 <span><Link to={'/login'}>Login</Link></span>

@@ -21,10 +21,6 @@ const CardeDetalheProduto = (props)=>{
                 <IncluiProduto/>
             </div> 
 
-           
-            {/* <h3>{props.nome}</h3>
-            <p className="descricaoCard">{props.descricao}</p>
-            <p className="precoCard">R$ {props.preco}</p> */}
 
         </CardeDetalheProdutoWay>
 

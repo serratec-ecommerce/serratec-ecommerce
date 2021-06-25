@@ -4,19 +4,45 @@ import apiUsuario from "../../service/ApiUsuario";
 import { Botao, BotaoSecundario } from "../../styles/buttons-styles";
 import { DivGrupo } from "../../styles/geral-styles";
 import { Link } from "react-router-dom";
+import ApiPedido from '../../service/ApiPedido'
+import utilsStorage from '../../utils/storage'
 
-const IncluiProduto = () => {
+const IncluiProduto = (props) => {
+
+  const CriaPedido = (e) => {
+
+    // {
+    //   "idCliente": 0,
+    //   "produtosDoPedido": [
+    //     {
+    //       "idPedido": 0,
+    //       "idProduto": 0,
+    //       "quantidade": 0
+    //     }
+    //   ]
+    // }
+
+    const id = props.id
+    const pedido = {
+      idCliente: utilStorage.getId(),
+      produtosDoPedido: {
+        idProduto: id,
+        quantidade: e.target.getAttribute('itemID').value
+      }
+    }
+    ApiPedido.criar(pedido)
+
+  }
  
   return (
     <div>
-     
      <DivGrupo>
         <h1>Carrinho</h1>
           <div className="dados">
-            <label htmlFor="email"> Quantidade </label>
+            <label htmlFor="text"> Quantidade </label>
             <br />
             <input
-              itemID="email"
+              itemID="text"
               type="text"
             //   placeholder="exemplo@exemplo.com"
             //   value={email}
@@ -24,14 +50,17 @@ const IncluiProduto = () => {
             />
           </div>
           <div className="butons">
-            <Botao type="submit">Cadastrar</Botao>
+            <Botao to={'/carrinho'} type="submit">Criar Pedido</Botao>
+              <Link to={"/pagamento"}>
+                <Botao>
+                Comprar agora
+                </Botao>
+              </Link>
             <Botao background={"#fff"}>
-              <Link to={"/"}> Voltar</Link>
+              <Link to={"/"}>Voltar</Link>
             </Botao>
           </div>
         </DivGrupo>
-      
-     
     </div>
   );
 };

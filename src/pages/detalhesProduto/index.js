@@ -7,15 +7,6 @@ import React, { useState, useEffect } from 'react';
 import MeuCard from '../../components/Card/MeuCard';
 import CardeDetalheProduto from '../../components/Card/CardDetalheProduto'
 
-// const DetalhesProduto = () => (
-//     <ContainerprodutoWay>
-//       <MeuCardWay>
-//           <h1>Detalhe do Produto</h1>
-//         </MeuCardWay>  
-//     </ContainerprodutoWay>
-// )
-
-// export default DetalhesProduto
 
 const Detalhes = (props) => {
 
@@ -41,8 +32,14 @@ const Detalhes = (props) => {
 
     return (
         <ContainerprodutoWay>
-            <CardeDetalheProduto img={produto.url} nome={produto.nome} descricao={produto.descricao} preco={produto.preco} categoria={produto.idCategoria}/>
-       
+            <CardeDetalheProduto 
+                img={produto.url} 
+                nome={produto.nome} 
+                descricao={produto.descricao} 
+                preco={produto.preco} 
+                categoria={produto.idCategoria}
+                idProduto={id}
+                />
         </ContainerprodutoWay>
     );
 }

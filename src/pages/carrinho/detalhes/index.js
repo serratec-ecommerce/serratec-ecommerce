@@ -5,7 +5,6 @@ import utilStorage from '../../../utils/storage'
 const Detalhes = (props) => {
 
     const [produtos, setProdutos] = useState([])
-
     function obterProdutos(numeroDoPedido) {
         ApiCarrinho.obterProdutos(numeroDoPedido)
             .then((response => {
