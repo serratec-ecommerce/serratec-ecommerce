@@ -9,9 +9,8 @@ export const BuscadorWay = styled.div`
  border-radius: 3px;
  display: grid;
  grid-template-columns: auto auto;
- /* padding-right: 50px; */
  margin-right:100px;
-
+background: white;
 
 input{
     display: block;
@@ -22,7 +21,6 @@ input{
     line-height: 1.5;
     color: rgb(127,127,127);
     background-color: #fff;
-    /* background-clip: padding-box; */
     border: 1px solid #ced4da;
     outline:none;
     border:none;

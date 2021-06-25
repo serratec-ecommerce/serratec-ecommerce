@@ -6,8 +6,10 @@ margin: auto;
 width: 80%;
 height: 400px;
 border: 1px solid #481ed6;
-display: grid;
-grid-template-columns: 30% 30% 40%;
+display: flex;
+/* grid-template-columns: 30% 30% 40%; */
+/* flex-direction: row; */
+flex-wrap: wrap;
 
 .cardLeft{
     display: flex;
@@ -28,6 +30,7 @@ grid-template-columns: 30% 30% 40%;
      display:flex;
      flex-direction: column;
      align-items: flex-start;
+   
 
             h3{
                 margin-top: 5px;
@@ -41,6 +44,7 @@ grid-template-columns: 30% 30% 40%;
                 color: rgb(41,56,69);
                 font-size:15px;
                 text-align: left;
+               
             }
             .precoCard{
                  

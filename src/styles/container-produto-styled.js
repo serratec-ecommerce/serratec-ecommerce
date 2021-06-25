@@ -1,12 +1,17 @@
 import styled from "styled-components";
 
 export const ContainerprodutoWay = styled.div`
-    padding: 30px;
-    display: flex;
-    /* justify-content: center;
-    align-items: center; */
-    justify-content: center;
-    flex-wrap: wrap;
-    gap:15px;
+      
+    .centralizer{
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width:1400px;
+        width:90vw;
+        margin:0 auto;
+        gap:15px;
+        padding: 30px 0;
+        
+    }
 
 `;

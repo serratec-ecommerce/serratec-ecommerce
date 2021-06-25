@@ -1,7 +1,7 @@
 import styled from "styled-components";
+export const DivGrupo2 = styled.div`
 
-export const DivGrupo = styled.div`
-  display: flex;
+ display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -11,11 +11,26 @@ export const DivGrupo = styled.div`
   margin: 4% auto;
   padding: 15px;
   border: solid 2px #481ed6;
+  box-shadow: 0 0 10px 0 rgb(50 50 50 / 82%)`;
+
+  
+export const DivGrupo = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 760px;
+  margin: 3% auto;
+  padding: 6%;
+  height:930px;
+  border: solid 2px #481ed6;
   box-shadow: 0 0 10px 0 rgb(50 50 50 / 82%);
+  
+  
 
   h1 {
     color: #481ed6;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   label {
@@ -27,15 +42,17 @@ export const DivGrupo = styled.div`
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-    padding: 5px;
+    padding: 10px;
+    
 
     input {
       width: 100%;
-      padding: 6px;
+      padding: 7px;
       outline: none;
       overflow: hidden;
-      border-radius: 3px;
-      color:gray;}
+      border-radius: 6px;
+      color:gray;
+  }
 
       input[type="date"] {
       color:gray
@@ -78,7 +95,7 @@ export const DivGrupo = styled.div`
 
     p {
       text-align: center;
-      padding-top: 10px;
+      padding-top: 20px;
     }
 
     a {
@@ -94,13 +111,36 @@ export const DivGrupo = styled.div`
     align-items: flex-start;
     width: 90%;
     max-width: 600px;
+    
 
     h2{
       padding-left:200px;
       color: #481ed6;
     }
 
+
+   
     .radios{
       
     }
+    
   `;
+
+  export const Botao1 = styled.button `
+  border-radius: 10px;
+  border: none;
+  margin: 10px;
+  width: 180px;
+  padding: 6px;
+  margin-left:50px;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 450;
+  cursor: pointer;
+  background-color: ${({ background }) => background || "#481ed6"};
+  color: #fff;
+  transition: 0.4s;
+
+`;

@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const NaviBarWay = styled.div`
          
+         background-color: #2cbfc6;
         width:100%;
-        height:30px;
+        height:35px;
         border-top: 2px solid #ddd;
         border-bottom: 2px solid #ddd;
         display: grid;
@@ -19,27 +20,20 @@ export const NaviBarWay = styled.div`
           display: flex;
           align-items: center;
           justify-content: flex-end;
-          gap: 5px;
           padding-right:30px;
           cursor: pointer;
           color:#481ed6;
+          gap:10px;
 
           :hover{
              color:#2cbfc6;
-            /* color: rgb(83,158,224); */
                        
              }
 
 
         }    
 
-            /* width:100%;
-            height:30px;
-            border-top: 2px solid #ddd;
-            border-bottom: 2px solid #ddd;
-            display: flex;
-            justify-content: center;
-            align-items: center; */
+          
 
         ul{
             list-style-type: none;
@@ -49,7 +43,7 @@ export const NaviBarWay = styled.div`
 
                 li.menu{
                     font-size:18px;
-                    color: rgb(41,56,69);
+                    color: white;
                     padding: 15px 17px;
                     text-decoration: none;
                     text-align:center;
@@ -58,8 +52,7 @@ export const NaviBarWay = styled.div`
                     
                     
                     :hover{
-                       color:#2cbfc6;
-                        /* color: rgb(83,158,224); */
+                       color:black;
                        
                     }
                 }

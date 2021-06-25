@@ -1,6 +1,6 @@
 import React from 'react';
 import {CardeDetalheProdutoWay} from '../../styles/card-detalhe-produto-styled';
-import IncluiProduto from '../../components/IncluiProduto/IncluiProduto'
+import IncluiProduto from '../IncluiProduto/IncluiProduto'
 
 const CardeDetalheProduto = (props)=>{
     return(
@@ -21,6 +21,10 @@ const CardeDetalheProduto = (props)=>{
                 <IncluiProduto/>
             </div> 
 
+           
+            {/* <h3>{props.nome}</h3>
+            <p className="descricaoCard">{props.descricao}</p>
+            <p className="precoCard">R$ {props.preco}</p> */}
 
         </CardeDetalheProdutoWay>
 

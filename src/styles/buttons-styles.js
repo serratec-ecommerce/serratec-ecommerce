@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const Botao = styled.button`
   border-radius: 10px;
   border: none;
-  margin: 10px;
-  width: 180px;
-  padding: 6px;
+  margin: 12px;
+  width: 500px;
+  padding: 9px;
   text-align: center;
   justify-content: center;
   font-size: 18px;
@@ -17,13 +17,5 @@ export const Botao = styled.button`
 
   &:hover {
     filter: brightness(0.8);
-  }
-`;
-
-export const BotaoSecundario = styled(Botao)`
-  background-color: #fff;
-  a {
-    text-decoration: none;
-    color: #481ed6;
   }
 `;

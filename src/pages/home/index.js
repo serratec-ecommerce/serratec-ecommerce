@@ -9,25 +9,11 @@ const Home = () => {
 
     const [produtos, setProdutos] = useState([])
 
-    // const filtraProdutoPorCategoria = (listaDeProdutos = []) => {
-    //     return listaDeProdutos.reduce(
-    //         (listaFiltrada, produtoAtual) => {
-    //             listaFiltrada[produtoAtual.idCategoria] = listaFiltrada[produtoAtual.idCategoria] || [];
-    //             listaFiltrada[produtoAtual.idCategoria].push(produtoAtual);
-    //             return listaFiltrada
-    //         }, {}
-    //     )
-    // }
-    // console.log(filtraProdutoPorCategoria(produtos))
-
-    // const frete = filtraProdutoPorCategoria(produtos)['3'] || []
-    // console.log(frete)
-
     const obterProdutos = () => {
         ApiProduto.getProduto()
             .then((resposta => {
                 setProdutos(resposta.data);
-                // console.log(resposta);
+                
             }))
             .catch((erro => {
                 console.log(erro)
@@ -36,7 +22,7 @@ const Home = () => {
 
     useEffect(() => {
         obterProdutos();
-    }, "batinha")
+    }, [])
 
     return (
         // <div className='container-produtos'>

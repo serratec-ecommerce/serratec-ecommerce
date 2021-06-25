@@ -28,7 +28,7 @@ const Detalhes = (props) => {
     useEffect(() => {
         obterProdutos(id);
         console.log(id);
-    }, "batinha")
+    }, [])
 
     return (
         <ContainerprodutoWay>
