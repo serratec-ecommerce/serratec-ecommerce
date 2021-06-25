@@ -5,7 +5,7 @@ import {MeuCardWay} from '../../styles/meu-card-styles';
 import ApiProduto from '../../service/ApiProduto';
 import React, { useState, useEffect } from 'react';
 import MeuCard from '../../components/Card/MeuCard';
-
+import CardeDetalheProduto from '../../components/Card/CardDetalheProduto'
 
 // const DetalhesProduto = () => (
 //     <ContainerprodutoWay>
@@ -41,7 +41,7 @@ const Detalhes = (props) => {
 
     return (
         <ContainerprodutoWay>
-            <MeuCard img={produto.url} nome={produto.nome} descricao={produto.descricao} preco={produto.preco}/>
+            <CardeDetalheProduto img={produto.url} nome={produto.nome} descricao={produto.descricao} preco={produto.preco} categoria={produto.idCategoria}/>
        
         </ContainerprodutoWay>
     );

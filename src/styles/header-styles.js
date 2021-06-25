@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const Header = styled.div`
     
     width:100%;
-    height:60px;
+    height:70px;
     
     /* border-top: 2px solid #ddd;
     border-bottom: 2px solid #ddd; */

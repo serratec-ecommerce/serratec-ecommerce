@@ -3,13 +3,14 @@ import styled from "styled-components";
 export const MeuCardWay = styled.div`
 
 width: 200px;
-height: auto;
+height: 300px;
 border: 1px solid #481ed6;
 display: flex;
 flex-direction:column;
 /* margin-top:10px; */
 text-align: center;
 cursor: pointer;
+
     h3{
         margin-top: 5px;
         color:#481ed6;
@@ -26,8 +27,8 @@ cursor: pointer;
 
     .precoCard{
         text-align: right;
-      margin-bottom: 2px;
-      margin-right: 2px;
+        margin-bottom: 2px;
+        margin-right: 10px;
         font-weight:bold;
         color: #2cbfc6;
 
@@ -35,7 +36,7 @@ cursor: pointer;
 
    :hover{
     width: 205px;
-    height: auto;
+    height: 305px;
     box-shadow: 5px 5px 3px rgb(228,224,243);
     border: 1px solid #ddd;
    }

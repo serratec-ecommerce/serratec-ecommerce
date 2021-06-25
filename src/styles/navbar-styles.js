@@ -19,6 +19,7 @@ export const NaviBarWay = styled.div`
           display: flex;
           align-items: center;
           justify-content: flex-end;
+          gap: 5px;
           padding-right:30px;
           cursor: pointer;
           color:#481ed6;

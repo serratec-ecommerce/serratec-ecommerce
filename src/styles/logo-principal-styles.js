@@ -8,6 +8,7 @@ color:#481ed6;
 /* padding-left: 20px;
 font-weight:bold; */ 
     img{
+        padding: 10px 15px;
         width: 70%;
         height: 70%;
         /* margin-left: 5px;
