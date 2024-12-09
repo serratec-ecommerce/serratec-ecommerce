@@ -1,14 +1,22 @@
 import React from 'react';
+import {Header} from '../../styles/header-styles';
+import Logo from '../Logo/Logo';
+import Buscador from '../BuscaProduto/BuscaProduto'
+import LogoCarrinho from '../Logo/LogoCarrinho';
+import NaviBarTopo from '../../components/NaviBar/NaviBar';
 
-const Header = () => (
-    <center>
-        Header
-        <ul>
-            <li>Frete Grátis</li>
-            <li>Nacionais</li>
-            <li>Importados</li>
-        </ul>
-    </center>
+const Topo = () => (
+    <div>
+        <Header>
+                  <Logo/>
+                  <Buscador/>
+                  <LogoCarrinho/>    
+        </Header>
+        <NaviBarTopo/>
+           
+       
+            
+    </div>
 )
 
-export default Header;
+export default Topo;

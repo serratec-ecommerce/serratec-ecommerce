@@ -10,19 +10,29 @@ import Login from "./pages/login";
 import Pagamento from "./pages/pagamento";
 import Pesquisa from "./pages/home";
 import Header from "./components/Header";
+import Detalhes from './pages/carrinho/detalhes'
+import Topo from '../src/components/Header/index'
+import Frete from '../src/pages/home/categoria1'
+import Nacional from '../src/pages/home/categoria2'
+import Importado from '../src/pages/home/categoria3'
 
 const Routes = () => (
   //Dizer que vai fazer as rotas atras de um browser
   <BrowserRouter>
+   <Topo/>
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route exact path="/produtos" component={DetalhesProduto} />
+      <Route exact path="/frete-gratis" component={Frete} />
+      <Route exact path="/nacional" component={Nacional} />
+      <Route exact path="/importado" component={Importado} />
+      <Route exact path="/produtos/:id" component={DetalhesProduto} />
       <Route path="/produtos/pesquisa" component={Pesquisa} />
       <Route path="/cadastro" component={Cadastro} />
-      <Route path="/carrinho" component={Carrinho} />
+      <Route exact path="/carrinho" component={Carrinho} />
+      <Route path="/carrinho/pedido/:numeroDoPedido" component={Detalhes} />
+      <Route path="/login" component={Login} />
+      <Route path="/pagamento" component={Pagamento} />
     </Switch>
-    <Route path="/login" component={Login} />
-    <Route path="/pagamento" component={Pagamento} />
   </BrowserRouter>
 );
 

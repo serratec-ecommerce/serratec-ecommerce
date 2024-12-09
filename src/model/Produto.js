@@ -4,6 +4,9 @@ class Produto{
         this.nome = obj.nome;
         this.descricao = obj.descricao;
         this.preco = obj.preco;
-        this.freteGratis = obj.freteGratis;
+        this.categoria = obj.idCategoria;
+        this.imagem = obj.url;
     }
 }
+
+export default Produto;

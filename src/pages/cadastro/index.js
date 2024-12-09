@@ -246,10 +246,9 @@ const Cadastro = () => {
           </div>
           <div className="butons">
             <Botao type="submit">Cadastrar</Botao>
-            <BotaoSecundario >
-              {" "}
+            <Botao background={"#fff"}>
               <Link to={"/login"}> Voltar</Link>
-            </BotaoSecundario>
+            </Botao>
           </div>
         </DivGrupo>
       </form>
